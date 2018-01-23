@@ -14,8 +14,8 @@ import java.util.stream.Stream
 @RequestMapping("/api/user")
 class UserService (private val userRepo: UserRepo){
     @GetMapping(path = ["/all"], produces = [MediaType.APPLICATION_JSON_UTF8_VALUE])
-    fun getAllUsers() : Flux<Flux<MutableIterable<User>>>? {
-        val users = Flux.fromStream(Stream.generate {this.userRepo.findAll()})
-        return Flux.just(users)
+    fun getAllUsers() : Flux<MutableList<User>> {
+        val users = this.userRepo.findAll()
+        return Flux.just(users as MutableList<User>)
     }
 }
