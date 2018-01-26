@@ -20,9 +20,9 @@ class JPALauncher {
     @Bean
     fun addDefaultUser(userRepo : UserRepo) : CommandLineRunner {
         return CommandLineRunner {
-            userRepo.save(User("nabbasi","x"))
-            userRepo.save(User( "wahmed","x"))
-            userRepo.save(User("fabbasi","x"))
+            userRepo.save(User(username = "nabbasi",password = "x"))
+            userRepo.save(User( username = "wahmed",password = "x"))
+            userRepo.save(User(username = "fabbasi",password = "x"))
         }
     }
 

@@ -19,9 +19,10 @@
 	</parent>
 
 	<modules>
+        <module>kotlin</module>
 		<module>backend-api</module>
 		<module>rest-api</module>
-		<module>kotlin</module>
+		<module>app</module>
 	</modules>
 
 	<properties>

@@ -3,8 +3,8 @@ import javax.persistence.*
 
 @Entity
 data class User (
-    var username : String = "",
-    var password : String = "",
     @Id @GeneratedValue
-    var userId : Long = -1
+    var userId : Long = -1,
+    var username : String = "",
+    var password : String = ""
 )

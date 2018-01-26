@@ -3,4 +3,6 @@ package edu.learn.jpa.repos
 import edu.learn.jpa.entities.User
 import org.springframework.data.repository.CrudRepository
 
-interface UserRepo : CrudRepository<User, Long>
+interface UserRepo : CrudRepository<User, Long> {
+    fun getUserByUsername(username: String): User
+}

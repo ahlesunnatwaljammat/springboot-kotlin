@@ -26,7 +26,7 @@ class UserRest (@Autowired private val userRepo: UserRepo){
 
     @GetMapping(path = ["/hello/user/{name}"])
     fun helloByUser(@PathVariable name : String) : User {
-        return User(name)
+        return User(username = name)
     }
 
     @GetMapping(path = ["/all"])
