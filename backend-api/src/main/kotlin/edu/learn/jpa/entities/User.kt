@@ -1,4 +1,4 @@
-package edu.learn.entities
+package edu.learn.jpa.entities
 import javax.persistence.*
 
 @Entity

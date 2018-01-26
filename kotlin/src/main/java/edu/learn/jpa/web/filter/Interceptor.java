@@ -1,4 +1,4 @@
-package edu.learn.web.filter;
+package edu.learn.jpa.web.filter;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;

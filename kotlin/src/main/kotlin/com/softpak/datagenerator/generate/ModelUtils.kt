@@ -4,7 +4,7 @@ import com.softpak.datagenerator.utils.AppSettings
 import com.softpak.datagenerator.utils.FileUtils
 import com.softpak.datagenerator.utils.precision
 import com.softpak.datagenerator.utils.rand
-import edu.learn.beans.Firm
+import edu.learn.jpa.beans.Firm
 import java.io.File
 
 class ModelUtils(private val firm: Firm?) {

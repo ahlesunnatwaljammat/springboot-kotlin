@@ -1,6 +1,6 @@
-package edu.learn.repos
+package edu.learn.jpa.repos
 
-import edu.learn.entities.User
+import edu.learn.jpa.entities.User
 import org.springframework.data.repository.CrudRepository
 
 interface UserRepo : CrudRepository<User, Long>

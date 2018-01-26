@@ -1,4 +1,4 @@
-package edu.learn.basic
+package edu.learn.jpa.basic
 
 import java.math.BigDecimal
 

@@ -1,4 +1,4 @@
-package edu.learn.beans;
+package edu.learn.jpa.beans;
 
 public class SetupApplication {
     public Firm createFirms(String firmName){

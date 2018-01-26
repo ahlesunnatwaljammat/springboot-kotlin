@@ -1,4 +1,4 @@
-package edu.learn.coroutine
+package edu.learn.jpa.coroutine
 
 import kotlinx.coroutines.experimental.delay
 import kotlinx.coroutines.experimental.launch

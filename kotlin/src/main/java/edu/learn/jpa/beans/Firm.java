@@ -1,4 +1,4 @@
-package edu.learn.beans;
+package edu.learn.jpa.beans;
 
 public class Firm {
     private String firmName;

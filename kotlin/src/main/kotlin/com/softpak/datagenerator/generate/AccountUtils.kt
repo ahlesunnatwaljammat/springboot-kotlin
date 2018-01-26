@@ -4,7 +4,7 @@ import com.softpak.datagenerator.utils.AppSettings
 import com.softpak.datagenerator.utils.FileUtils
 import com.softpak.datagenerator.utils.rand
 import com.softpak.datagenerator.utils.randomDate
-import edu.learn.beans.Firm
+import edu.learn.jpa.beans.Firm
 
 import java.io.File
 import java.time.LocalDate

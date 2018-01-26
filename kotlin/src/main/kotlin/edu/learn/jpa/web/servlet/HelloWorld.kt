@@ -1,4 +1,4 @@
-package edu.learn.web.servlet
+package edu.learn.jpa.web.servlet
 
 import javax.servlet.annotation.WebServlet
 import javax.servlet.http.HttpServlet

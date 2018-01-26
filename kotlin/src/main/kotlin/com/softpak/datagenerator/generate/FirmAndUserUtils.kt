@@ -3,8 +3,8 @@ package com.softpak.datagenerator.generate
 import com.softpak.datagenerator.Options
 import com.softpak.datagenerator.utils.FileUtils
 
-import edu.learn.beans.Firm
-import edu.learn.beans.SetupApplication
+import edu.learn.jpa.beans.Firm
+import edu.learn.jpa.beans.SetupApplication
 import java.io.File
 
 class FirmAndUserUtils(private val option: Options) {

@@ -1,5 +1,5 @@
 
-import edu.learn.basic.Variables
+import edu.learn.jpa.basic.Variables
 import org.junit.AfterClass
 import org.junit.Assert
 import org.junit.BeforeClass
