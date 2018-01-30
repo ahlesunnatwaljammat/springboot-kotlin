@@ -1,4 +1,4 @@
-package edu.learn.jpa.ws
+package edu.learn.webflux.ws
 
 import edu.learn.jpa.entities.User
 import edu.learn.jpa.repos.UserRepo
@@ -10,6 +10,11 @@ import reactor.core.publisher.Mono
 import java.time.Duration
 import java.util.stream.Stream
 
+/**
+ * http://noman:8999/app/api/users/allStream
+ * /app - servlet context
+ * /api - webflux service endpoint
+ */
 @RestController
 @RequestMapping("/api/users")
 class UserRest (@Autowired private val userRepo: UserRepo){

@@ -9,8 +9,9 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.context.annotation.ComponentScan
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories
 
+
 @SpringBootApplication
-@ComponentScan(basePackages = ["edu.learn","edu.learn.ws"])
+@ComponentScan(basePackages = ["edu.learn", "edu.learn.webflux.ws", "edu.learn.jersey.ws"])
 @EntityScan(basePackages = ["edu.learn.jpa.entities"])
 @EnableJpaRepositories(basePackages = ["edu.learn.jpa.repos"])
 class App : SpringBootServletInitializer(){

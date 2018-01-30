@@ -5,3 +5,12 @@ server:
     mime-types: application/javascript,application/json,text/css,text/html,text/plain
   servlet:
     context-path: /app
+
+logging:
+  level:
+    root: info
+  file: D:/logs.logs
+
+spring:
+  jersey:
+    application-path: /jersey
