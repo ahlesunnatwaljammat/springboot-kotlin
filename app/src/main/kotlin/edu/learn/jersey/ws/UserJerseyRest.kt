@@ -2,9 +2,14 @@ package edu.learn.jersey.ws
 
 import edu.learn.jpa.entities.User
 import edu.learn.jpa.repos.UserRepo
+import org.glassfish.jersey.server.ManagedAsync
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.data.domain.PageRequest
 import org.springframework.stereotype.Component
 import java.net.URI
 import javax.ws.rs.*
+import javax.ws.rs.container.AsyncResponse
+import javax.ws.rs.container.Suspended
 import javax.ws.rs.core.Response
 
 /**
@@ -14,13 +19,25 @@ import javax.ws.rs.core.Response
  */
 @Component
 @Path("/users")
-class UserJerseyRest(private val userRepo: UserRepo) {
+class UserJerseyRest {
+
+    @Autowired
+    lateinit var userRepo: UserRepo
 
     @GET
     @Produces("application/json")
-    @Path("/{username}")
+    @Path("/user/{username}")
     fun getBook(@PathParam("username") username: String) : User {
-        return User(1,"n","x")
+        return User(1,"n",Thread.currentThread().name)
+    }
+
+    @GET
+    @Produces("application/json")
+    @Path("/userasync/{username}")
+    @ManagedAsync
+    fun getBookAsync(@Suspended asyncResponse : AsyncResponse, @PathParam("username") username: String) {
+        val page = PageRequest.of(0,2)
+        asyncResponse.resume(this.userRepo.findByPasswordContaining("xxx", page).content)
     }
 
     @POST
