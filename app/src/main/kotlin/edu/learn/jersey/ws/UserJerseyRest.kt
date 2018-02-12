@@ -51,7 +51,7 @@ class UserJerseyRest {
     @DELETE
     @Path("/{id}")
     fun deleteBook(@PathParam("id") id: String): Response {
-        userRepo.delete(User(id!!.toLong()))
+        userRepo.delete(User(id.toLong()))
         return Response.ok().build()
     }
 }

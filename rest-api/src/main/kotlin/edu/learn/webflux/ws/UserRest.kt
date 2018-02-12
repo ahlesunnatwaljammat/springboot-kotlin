@@ -17,7 +17,9 @@ import java.util.stream.Stream
  */
 @RestController
 @RequestMapping("/api/users")
-class UserRest (@Autowired private val userRepo: UserRepo){
+class UserRest {
+    @Autowired
+    lateinit var userRepo: UserRepo
 
     @GetMapping(path = ["/hello"])
     fun helloByQueryParam(@RequestParam name : String? = "Noman") : String {
