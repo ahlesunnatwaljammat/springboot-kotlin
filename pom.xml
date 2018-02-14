@@ -22,6 +22,7 @@
         <module>kotlin</module>
 		<module>backend-api</module>
 		<module>rest-api</module>
+		<module>mongoApp</module>
 		<module>app</module>
 	</modules>
 
@@ -30,7 +31,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<kotlin.version>1.2.10</kotlin.version>
+		<kotlin.version>1.2.20</kotlin.version>
 		<kotlin.compiler.incremental>true</kotlin.compiler.incremental>
 	</properties>
 
@@ -144,6 +145,9 @@
 					</execution>
 				</executions>
 				<configuration>
+					<args>
+						<arg>-Xjsr305=strict</arg>
+					</args>
 					<compilerPlugins>
 						<plugin>spring</plugin>
 					</compilerPlugins>
