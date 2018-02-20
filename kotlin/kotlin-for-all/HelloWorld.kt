@@ -1,5 +1,3 @@
-package edu.learn.jpa.basic
-
 fun main(args: Array<String>) {
     println("Hello World")
 
@@ -13,4 +11,6 @@ fun main(args: Array<String>) {
     list.add("Hello World 3....")
     list.add("Hello World 4....")
     list.add("Hello World 5....")
+	
+	println(list)
 }
