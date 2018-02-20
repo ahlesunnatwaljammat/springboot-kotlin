@@ -27,7 +27,7 @@ class MongoLauncher {
     lateinit var userRepo: UserRepo
 
     @Bean
-    fun initData() : CommandLineRunner {
+    fun init() : CommandLineRunner {
         return CommandLineRunner {
             this.customerRepo.save(Customer(5,"Noman","Abbasi")).subscribe()
 
