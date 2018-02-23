@@ -31,16 +31,16 @@ public class AsyncServlet extends HttpServlet {
 
         // attach listener to respond to lifecycle events of this AsyncContext
         asyncContext.addListener(new AsyncListener() {
-            public void onComplete(AsyncEvent event) throws IOException {
+            public void onComplete(AsyncEvent event) {
                 log("onComplete called");
             }
-            public void onTimeout(AsyncEvent event) throws IOException {
+            public void onTimeout(AsyncEvent event) {
                 log("onTimeout called");
             }
-            public void onError(AsyncEvent event) throws IOException {
+            public void onError(AsyncEvent event) {
                 log("onError called");
             }
-            public void onStartAsync(AsyncEvent event) throws IOException {
+            public void onStartAsync(AsyncEvent event) {
                 log("onStartAsync called");
             }
         });
